@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navigation_menu_profile"
+        android:icon="@drawable/ic_user"
+        android:title="@string/profilem"/>
+    <item android:id="@+id/navigation_menu_popular"
+        android:icon="@drawable/ic_popular"
+        android:title="@string/popularm"/>
+    <item android:id="@+id/navigation_menu_top_rated"
+        android:icon="@drawable/ic_toprated"
+        android:title="@string/top_ratedm"/>
+    <item android:id="@+id/navigation_menu_upcoming"
+        android:icon="@drawable/ic_upcoming"
+        android:title="@string/upcomingm"/>
+
+    </menu>
+

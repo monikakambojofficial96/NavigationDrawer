@@ -8,9 +8,10 @@
     <string name="top_rated">This is for Top Rated</string>
     <string name="upcoming">This is for Upcoming</string>
     <string name="popularm">Popular</string>
-    <string name="profilem">Profile</string>
+    <string name="home">Home</string>
     <string name="top_ratedm">Top Rated</string>
     <string name="upcomingm">Upcoming</string>
     <string name="recycler_view">Recycler View</string>
     <string name="movie_detail">Movie Detail</string>
+    <string name="gmail">monika.rani@netsolutions.com</string>
 </resources>

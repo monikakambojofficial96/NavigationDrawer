@@ -2,14 +2,13 @@ package com.example.navigationdrawer;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -29,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState ();
 
         getSupportActionBar ().setDisplayHomeAsUpEnabled ( true );
+        this.getSupportActionBar().setTitle("MovieMesh");             //for title of action bar
 
         navigationView=findViewById ( R.id.activity_main_navigation_drawer );
         navigationView.setNavigationItemSelectedListener ( new NavigationView.OnNavigationItemSelectedListener () {
@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         } );
-
     }
 
     public void addFragment(Fragment fragment) {
@@ -64,12 +63,14 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.closeDrawers ();                                      // close the all open Drawer Views
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+            if (actionBarDrawerToggle.onOptionsItemSelected ( item )) {
+                return true;
+            }
+            return super.onOptionsItemSelected ( item );
 
-        if (actionBarDrawerToggle.onOptionsItemSelected ( item ))
-            return true;
-
-        return super.onOptionsItemSelected ( item );
     }
+
 }

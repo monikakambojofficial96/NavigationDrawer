@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,6 +34,7 @@ public class TopRatedFragment extends Fragment {
         LinearLayoutManager layoutManager=new LinearLayoutManager ( getActivity () );
         recyclerView.setLayoutManager (layoutManager);
         recyclerView.setAdapter(popularMovieAdapter);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Top Rated Movies");
 
         //Recycler View End
         return rootView;
@@ -62,4 +64,5 @@ public class TopRatedFragment extends Fragment {
         moviesList.add(new MovieModel("Black Friday",R.raw.black_friday));
 
     }
+
 }

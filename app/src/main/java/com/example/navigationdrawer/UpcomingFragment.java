@@ -32,6 +32,7 @@ public class UpcomingFragment extends Fragment {
         LinearLayoutManager layoutManager=new LinearLayoutManager ( getActivity () );
         recyclerView.setLayoutManager (layoutManager);
         recyclerView.setAdapter(popularMovieAdapter);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Upcoming Movies");
 
         //Recycler View End
         return rootView;

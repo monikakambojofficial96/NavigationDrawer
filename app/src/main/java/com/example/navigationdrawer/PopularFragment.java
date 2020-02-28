@@ -2,6 +2,7 @@ package com.example.navigationdrawer;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,16 +30,25 @@ public class PopularFragment extends Fragment {
         //RecycclerView  Started
 
         View rootView=inflater.inflate ( R.layout.activity_popular_fragment, container, false );
-
         recyclerView=rootView.findViewById ( R.id.recycler_view );
         movieData ();
         PopularMovieAdapter popularMovieAdapter=new PopularMovieAdapter ( ((AppCompatActivity) getActivity ()), moviesList );
         LinearLayoutManager layoutManager=new LinearLayoutManager ( getActivity () );
         recyclerView.setLayoutManager ( layoutManager );
         recyclerView.setAdapter ( popularMovieAdapter );
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Popular Movies");
 
         //Recycler View End
         return rootView;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                getActivity().onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
   public void movieData() {

@@ -1,12 +1,12 @@
 package com.example.navigationdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -60,12 +60,11 @@ public class PopularMovieAdapter extends RecyclerView.Adapter<PopularMovieAdapte
 
         @Override
         public void onClick(View v) {
-
-            DetailFragment popularFragment=new DetailFragment ();
             Bundle bundle=new Bundle ();
-            bundle.putSerializable ( "position", moviesList.get ( getAdapterPosition () ) );
-            popularFragment.setArguments ( bundle );
-            ((MainActivity) activity).addFragment ( popularFragment );
+            bundle.putSerializable ( "position", moviesList.get ( getAdapterPosition ())) ;
+            Intent intent=new Intent ( activity,DetailActivity.class );
+            intent.putExtra ( "position" ,bundle);         //for Serializable
+            activity.startActivity ( intent );
         }
     }
 }

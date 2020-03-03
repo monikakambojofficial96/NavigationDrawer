@@ -10,11 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ProfileFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate ( R.layout.activity_profile_fragment, container, false );
+        return inflater.inflate ( R.layout.activity_main, container, false );
     }
 }

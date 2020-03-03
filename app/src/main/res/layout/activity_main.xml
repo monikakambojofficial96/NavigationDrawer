@@ -19,19 +19,18 @@
 
 
     </LinearLayout>
-
-<!--    <TextView-->
-<!--           android:layout_width="wrap_content"-->
-<!--           android:layout_height="wrap_content"-->
-<!--           android:id="@+id/activity_main_text"-->
-<!--           android:textAppearance="?android:textAppearanceLarge"-->
-<!--           android:text="@string/main"/>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:gravity="center"/>
 
     <com.google.android.material.navigation.NavigationView
+
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
-        app:headerLayout="@layout/nav_header"
         android:id="@+id/activity_main_navigation_drawer"
         android:layout_gravity="start"/>
 

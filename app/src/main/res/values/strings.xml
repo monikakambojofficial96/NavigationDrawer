@@ -14,4 +14,18 @@
     <string name="recycler_view">Recycler View</string>
     <string name="movie_detail">Movie Detail</string>
     <string name="gmail">monika.rani@netsolutions.com</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="monika">Monika</string>
+    <string name="current_location">Chandigarh</string>
+    <string name="fazilka">Fazilka</string>
+    <string name="gender">Gender</string>
+    <string name="mobile">Mobile</string>
+    <string name="dob">DOB</string>
+    <string name="email">Email</string>
+    <string name="work">Work</string>
+    <string name="female">Female</string>
+    <string name="mobile_no">7340717238</string>
+    <string name="_20_07_1996">20/07/1996</string>
+    <string name="mail">monika.rani@netsolutions.com</string>
+    <string name="development">Development</string>
 </resources>

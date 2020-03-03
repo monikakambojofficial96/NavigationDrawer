@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.navigationdrawer">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <supports-screens android:anyDensity="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +20,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:noHistory = "true"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity
+            android:name=".DetailActivity"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".DetailFragment" />
         <activity android:name=".UpcomingFragment" />
         <activity android:name=".TopRatedFragment" />
         <activity android:name=".PopularFragment" />
-        <activity android:name=".ProfileFragment" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".HomeFragment" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

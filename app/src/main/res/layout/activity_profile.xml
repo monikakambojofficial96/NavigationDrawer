@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/activity_profile_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/activity_profile_circular_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/image_background"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/the_winds_hawayein" />
+    <ImageView
+        android:id="@+id/activity_profile_edit_image_view"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:focusable="true"
+        android:src="@drawable/ic_pencil"/>
+    <TextView
+        android:id="@+id/activity_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monika"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/activity_profile_circular_image"
+        android:textColor="#fff"
+        tools:ignore="RelativeOverlap,TextViewEdits" />
+    <TextView
+        android:id="@+id/activity_profile_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_alignTop="@+id/activity_profile_name"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        tools:ignore="RelativeOverlap,TextViewEdits"
+        android:text="@string/current_location"/>
+    <TextView
+        android:id="@+id/activity_profile_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_alignTop="@+id/activity_profile_location"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        tools:ignore="RelativeOverlap,TextViewEdits"
+        android:text="@string/fazilka"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_profile_image_view"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activity_profile_tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="20sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/activity_profile_tv_gender_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/female"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/activity_profile_tv_gender"
+            app:layout_constraintStart_toEndOf="@+id/activity_profile_tv_gender"
+            />
+
+
+        <TextView
+            android:id="@+id/activity_profile_tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="@string/mobile"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_profile_tv_gender" />
+
+
+        <TextView
+            android:id="@+id/activity_profile_tv_mobile_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/mobile_no"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/activity_profile_tv_mobile"
+            app:layout_constraintStart_toEndOf="@id/activity_profile_tv_mobile" />
+
+        <TextView
+            android:id="@+id/activity_profile_tv_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:inputType="date"
+            android:text="@string/dob"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_profile_tv_mobile"
+            tools:ignore="TextViewEdits" />
+
+        <TextView
+            android:id="@+id/activity_profile_tv_dob_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:inputType="date"
+            android:text="@string/_20_07_1996"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/activity_profile_tv_dob"
+            app:layout_constraintStart_toEndOf="@id/activity_profile_tv_dob"
+            tools:ignore="TextViewEdits" />
+
+        <TextView
+            android:id="@+id/activity_profile_tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="20sp"
+            android:inputType="textEmailAddress"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_profile_tv_dob"
+            tools:ignore="TextViewEdits"/>
+
+        <TextView
+            android:id="@+id/activity_profile_tv_email_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:inputType="textEmailAddress"
+            android:text="@string/mail"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/activity_profile_tv_email"
+            app:layout_constraintStart_toEndOf="@+id/activity_profile_tv_email"
+            tools:ignore="TextViewEdits" />
+
+        <TextView
+            android:id="@+id/activity_profile_tv_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_profile_tv_email"
+            tools:ignore="TextViewEdits"/>
+
+        <TextView
+            android:id="@+id/activity_profile_tv_work_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:inputType="text"
+            android:text="@string/development"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/activity_profile_tv_work"
+            app:layout_constraintStart_toEndOf="@+id/activity_profile_tv_work"
+            tools:ignore="TextViewEdits" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.navigationdrawer"
-        minSdkVersion 23
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc01"
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.karumi:dexter:5.0.0'
 
 
 }

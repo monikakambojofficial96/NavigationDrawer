@@ -5,13 +5,10 @@
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical" >
 
-<!--    <TextView-->
-<!--        android:id="@+id/details"-->
-<!--        android:layout_width="322dp"-->
-<!--        android:layout_height="54dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:text="@string/movie_detail"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="@dimen/txtsize" />-->
+    <VideoView
+        android:id="@+id/activity_detail_fragment_video_view"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp" />
+
 
 </LinearLayout>

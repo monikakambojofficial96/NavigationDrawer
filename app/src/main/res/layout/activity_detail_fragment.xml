@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    android:orientation="vertical" >
+    android:layout_height="wrap_content"
+    android:background="#313A81"
+    android:orientation="horizontal"
+    android:padding="40dp">
 
-    <VideoView
-        android:id="@+id/activity_detail_fragment_video_view"
+<!--    <VideoView-->
+<!--        android:id="@+id/activity_detail_fragment_video_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"/>-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="0dp"-->
+<!--    android:layout_weight="1">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:text="fgdfdfdfdfdfdfdfdfdfd"-->
+<!--        android:layout_height="match_parent"></TextView>-->
+
+<!--</LinearLayout>-->
+    <ImageView
+        android:id="@+id/activity_detail_fragment_image_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/activity_detail_fragment_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/activity_detail_fragment_image_view"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="#fff"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/activity_detail_fragment_btn_action"
         android:layout_width="wrap_content"
-        android:layout_height="200dp" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_detail_fragment_text_view"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/activity_detail_fragment_image_view"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/action" />
 
-
-</LinearLayout>
+    <Button
+        android:id="@+id/activity_detail_fragment_btn_trailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/activity_detail_fragment_text_view"
+        android:layout_toEndOf="@id/activity_detail_fragment_btn_action"
+        android:layout_marginStart="10dp"
+        android:text="@string/trailer" />
+</RelativeLayout>

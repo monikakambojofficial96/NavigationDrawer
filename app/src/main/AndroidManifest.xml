@@ -20,12 +20,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ShowTrailerFragment">
+        </activity>
+        <activity android:name=".ProfileActivity" />
         <activity
             android:name=".DetailActivity"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".DetailFragment" />
+        <activity
+            android:name=".DetailFragment"
+            android:screenOrientation="landscape" />
         <activity android:name=".UpcomingFragment" />
         <activity android:name=".TopRatedFragment" />
         <activity android:name=".PopularFragment" />

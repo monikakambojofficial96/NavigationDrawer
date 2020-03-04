@@ -60,10 +60,8 @@ public class PopularMovieAdapter extends RecyclerView.Adapter<PopularMovieAdapte
 
         @Override
         public void onClick(View v) {
-            Bundle bundle=new Bundle ();
-            bundle.putSerializable ( "position", moviesList.get ( getAdapterPosition ())) ;
             Intent intent=new Intent ( activity,DetailActivity.class );
-            intent.putExtra ( "position" ,bundle);         //for Serializable
+            intent.putExtra ( "position" , moviesList.get ( getAdapterPosition ()));         //for Serializable
             activity.startActivity ( intent );
         }
     }
